@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*,
+::backdrop,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(113, 79, 79);
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  padding: 15px;
+  width: 350px;
+  height: 335px;
+  border-radius: 8px;
+  margin: 0 auto;
+  background: rgba(17, 16, 16, 0.8);
+}
+
+.output {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.output:hover .copy-btn {
+  opacity: 1;
+}
+
+.pw-output {
+  width: 100%;
+  border: none;
+  height: 3rem;
+  padding: 6px;
+  font-size: 18px;
+  background-color: rgba(159, 167, 105, 0.9);
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 4px rgba(230, 217, 45, 0.9), inset -1px -1px 4px rgba(230, 217, 45, 0.9);
+}
+
+.pw-length-form {
+  margin-bottom: 20px;
+}
+
+.pw-length {
+  border: none;
+  height: 25px;
+  width: 45px;
+  margin-left: 7px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 3px;
+}
+
+.pw-length-container {
+  margin-bottom: 20px;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  border: none;
+  background-color: rgb(201, 200, 189);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.copy-btn:hover,
+.copy-btn:focus {
+  background-color: rgb(99, 105, 49);
+  color: aquamarine;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: rgb(149, 131, 131);
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  appearance: none;
+  display: none;
+}
+
+.label span {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 26px;
+  border-radius: 22px;
+  background: rgb(37, 37, 37);
+  box-shadow: inset 0px 1px 7px rgba(130, 128, 128, 0.2), inset 0px 1px 2px rgba(81, 75, 75, 0.2),
+    inset 0px -1px 1px rgba(81, 75, 75, 0.2);
+}
+
+.label .indicator {
+  position: absolute;
+  top: 5px;
+  right: 26px;
+  width: 22px;
+  height: 23px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #444, #222);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), inset 0, 1px, 1px rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+
+.input:checked ~ .indicator {
+  right: 2px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.label .indicator::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(243, 51, 51);
+  box-shadow: 0 0 1px #f00, 0 0 2px #f00, 0 0 4px #f00, 0 0 6px #f00, 0 0 9px #f00, 0 0 12px #f00,
+    0 0 15px #f00;
+}
+
+.input:checked ~ .indicator::before {
+  background: #0f0;
+  box-shadow: 0 0 1px #0f0, 0 0 2px #0f0, 0 0 4px #0f0, 0 0 6px #0f0, 0 0 9px #0f0, 0 0 12px #0f0,
+    0 0 15px #0f0;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.generate-btn {
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: rgba(164, 156, 41, 0.9);
+  box-shadow: 2px 1px 12px rgb(172, 189, 120, 0.5);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.generate-btn:hover {
+  background-color: rgba(133, 128, 46, 0.9);
+  transform: translateY(2px);
+}
