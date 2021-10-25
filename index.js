@@ -1,6 +1,6 @@
-import refs from './js/refs';
-import { generateRandom } from './js/generateRandom';
-import { copyPassword } from './js/copyAction';
+import refs from './src/js/refs';
+import { generateRandom } from './src/js/generateRandom';
+import { copyPassword } from './src/js/copyAction';
 
 refs.generateBtn.addEventListener('click', generatePassword);
 refs.copyBtn.addEventListener('click', () => copyPassword(refs.generatedPw.value));
